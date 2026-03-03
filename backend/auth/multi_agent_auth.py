@@ -121,7 +121,7 @@ class MultiAgentTokenExchange:
 
         try:
             # Step 1: Exchange ID token for ID-JAG token
-            target_audience = config.audience
+            f"{self.okta_domain}/oauth2/{config.auth_server_id}"
             scope_string = " ".join(scopes)
 
             logger.info(f"[{agent_type}] Step 1: ID token -> ID-JAG, audience={target_audience}")
